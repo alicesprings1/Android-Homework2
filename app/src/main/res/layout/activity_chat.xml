@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbRoom"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:title="@string/title_text"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="32dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/ic_baseline_send_24"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ListView
+        android:id="@+id/lvMsg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:stackFromBottom="true"
+        android:divider="@null"
+        app:layout_constraintBottom_toTopOf="@+id/textInput"
+        app:layout_constraintTop_toBottomOf="@+id/tbRoom" />
+
+    <EditText
+        android:id="@+id/textInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:maxLines="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSend"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/refreshButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/tbRoom"
+        app:layout_constraintEnd_toEndOf="@+id/tbRoom"
+        app:layout_constraintTop_toTopOf="@+id/tbRoom"
+        app:srcCompat="@drawable/ic_baseline_refresh_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
